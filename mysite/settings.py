@@ -103,3 +103,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 #configurate the base of date
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#redireccionamiento a la pagina de primer nivel(index)
+LOGIN_REDIRECT_URL = '/'
