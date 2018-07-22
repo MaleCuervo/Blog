@@ -1,21 +1,25 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Final Diseño</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     </head>
      <body>
         <div class="page-header">
-            <h1><a href="/">Blog Bitson</a></h1>
+             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <h1><a href="/">Blog Alejandra Cuervo IFTS N°18 </a></h1>
         </div>
-        <div class="content container">
+        <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-sm-12 col-md-12">
                 {% block content %}
-                {% endblock %}
+                 {% endblock %}
                 </div>
-            </div>
+             </div>
         </div>
     </body>
 </html>
