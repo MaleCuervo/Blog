@@ -4,6 +4,17 @@
     {% if post.published_date %}
     <div class="date">
         {{ post.published_date }}
+    <div >
+      <h6>autor:</h6>
+        {{ post.author}}
+      {% if post.author_img %}
+        <img src={{ post.author_img.url }} alt="" class="author_img">
+      {% else %}
+      {% load static%}
+        <img src="{% static '/image/post/Bitson.png' %}" alt="" class="author_img" >
+      {% endif %}
+    </div>
+   
     </div>
         {% else %}
         <!--botón publicar-->
@@ -14,9 +25,20 @@
         <!--botón borrar-->
         <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         </div>
+        <!--
+        <div class="content container margin_post">
+          {% if post.image %}
+            <img src={{ post.image.url }} alt="" class="img_post">
+          {% else %}
+           {% load static%}
+            <img src="{% static '/image/post/post_default.png' %}" class="img_post">
+          {% endif %}
+        </div>
+        -->
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
-
+       
+       
         <div class="container comentary">
         <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Agregar Comentario</a>
         {% for comment in post.comments.all %}

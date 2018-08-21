@@ -2,23 +2,17 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Final Diseño</title>
+        <title>Blog</title>
         <link rel="shortcut icon" href="{% static 'image/post/Bitson.png'%} ">
         <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!--    jquery-->
-        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-       <!--[/] jquery -->
-       <!--bootstrap -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <!--[/] bootstrap-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+
+       
     </head>
      <body class="body">
         <div class="page-header">
@@ -29,16 +23,16 @@
         {% else %}
             <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock glyphicon-menu"></span></a>
         {% endif %}
-          <h1><a href="/">Blog Alejandra Cuervo IFTS N°18 </a></h1>
+          <h1><a href="/">Blog Bitson</a></h1>
         </div>
-        <div class="container">
+        <div class="conten container">
             <div class="col-md-12 col-sm-12">
                 <a href="https://bitson.com.ar/" target="_blank">
                   <img class="back-img" src="{% static '/image/post/post.png' %}" alt="back"/>
                 </a>
             </div>
         </div>
-        <div class="container">
+        <div class="content container">
             <div class="row">
                 <div class="col-md-2">
                     <a href="https://www.facebook.com/bitsonargentina/" target="_blank">
@@ -71,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="content container">
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                 {% block content %}
@@ -79,7 +73,7 @@
                 </div>
              </div>
         </div>
-        <div class="container">
+        <div class="content container">
             <div class="row" style="margin-top: 15%;">
                 <div class="col-md-6 col-sm-6">
                    <iframe src="https://calendar.google.com/calendar/b/1/embed?showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;bgcolor=%233366ff&amp;src=bitson.group_n8udeap8kf7sm5o73tho6nfjmo%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FArgentina%2FBuenos_Aires" style="border:solid 1px #777" width="550" height="400" frameborder="0" scrolling="no"></iframe>
@@ -113,6 +107,23 @@
         <div class="container">
             <h6 class="footer">BITSON 2018</h6>
         </div>
+
+        <!--jquery-->
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <!--[/] jquery -->
+        <!--bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!--[/] bootstrap-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+
     </body>
 </html>
  

@@ -4,11 +4,13 @@ from django.utils import timezone
 class Post(models.Model):
 	author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 	title = models.CharField(max_length=200)
+	image = models.ImageField(null=True, blank=True, upload_to="post_images/")
 	text = models.TextField()
 	created_date = models.DateTimeField(
 		default=timezone.now)
 	published_date = models.DateTimeField(
 		blank=True, null=True)
+	author_img =  models.ImageField(null=True, blank=True, upload_to="autor_images/")
 	
 	
 	def publish(self):
